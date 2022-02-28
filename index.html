@@ -10,17 +10,66 @@
 </head>
 <body>
     <header>
-
-
-
-
-
+        <h1 class="text-center text-warning mt-3 fw-bolder">Search Your Desire Phone Model</h1>
+        <!-- Phone Search -->
+        <div class="input-group mb-3 w-50  mx-auto mt-5  rounded">
+          <input
+            type="text"
+            id="input"
+            class="form-control"
+            placeholder="phone model name"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <button
+            onclick="searchFood()"
+            class="btn btn-dark"
+            type="button"
+            id="button-addon2"
+          >
+            Search
+          </button>
+        </div>
         
+         <!-- spinner -->
+         <div id="spinner">
+          <div class="d-flex justify-content-center">
+        <div class="spinner-border text-info" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        
+      </div>
+        </div>
+        <!-- Error Name -->
+        <div  class="ErrorName">
+          <h1 class="fw-bolder text-warning text-center ">Enter Valid Food name</h1>
+        </div>
+
+
+
+
+
     </header>
 
 
 
     <main>
+         <!-- Single Meal Details -->
+         
+            <div id="mealDetails" class="d-flex justify-content-center mb-5">
+                
+            </div>
+
+            <div id="moredetails" class=" d-flex justify-content-center mb-5 ">
+         </div>
+       
+    
+     <!-- Meal Search result -->
+     <div class="container d-flex">
+        <div id="searchResult" class=" row row-cols-1 mb-5 row-cols-md-2 row-cols-lg-3  g-4 "></div>
+        
+        </div>
+      </div>
 
     </main>
 

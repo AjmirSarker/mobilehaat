@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    background: url(/picture/phone.jpg) no-repeat center; 
+    background-size: cover; 
+}
+.ErrorName {
+    display: none; 
+  }
+  #spinner{
+    display: none;
+  }
