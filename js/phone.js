@@ -43,7 +43,7 @@ const DisplayResult = (phones) => {
       div.classList.add('col', 'rounded', 'text-center');
 
       div.innerHTML = `
-            <div   class="shadow w-100 g-4  mt-5  mb-5 h-100">
+            <div   class="shadow w-100 g-4 px-3  mt-5 mb-5 h-100 d-flex align-items-center justify-content-center">
       <img src="${phone.image}" class="card-img-top mt-2 w-50 mx-auto text-center" alt="...">
       <div class="card-body">
         <h5 class="card-title fw-bolder">${phone.phone_name}</h5>
