@@ -1,14 +1,17 @@
+/* Font family */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 *{
   font-family: 'Raleway', sans-serif;
 }
+/* Hide Error */
 #ErrorName {
     display: none; 
   }
+  /* Hide Spinner */
   #spinner{
     display: none;
   }
- 
+ /* Header design */
 header {
 display: flex;
 flex-direction: column;
@@ -20,6 +23,7 @@ color: white;
 background: url(/picture/phone.jpg) no-repeat center; 
 background-size: cover; 
 }
+/* Placeholder Design */
 ::placeholder{
 color: rgb(153, 149, 149) !important;
 }
