@@ -86,7 +86,7 @@ const displayPhoneDetails = (phone) => {
         
         <div class="card-body">
        
-          <p class="card-text">Name : ${phone.name}</p>
+          <p class="card-text">Model: ${phone.name}</p>
           <p class="card-text"> Chipset : ${phone.mainFeatures.chipSet}</p>
           <p class="card-text"> Display size : ${
             phone.mainFeatures.displaySize
@@ -129,7 +129,9 @@ const Displaymoredetails = (phone) => {
 
   try {
     div.innerHTML = `
-              <p class="card-text"> Sensors : ${phone.mainFeatures.sensors}</p>   
+    <p> Sensors : </p>
+              <p class="card-text">  ${phone.mainFeatures.sensors}</p>   
+              <p> Others : </p>
              <p class="card-text">Bluetooth: ${phone.others.Bluetooth}</p>
               <p class="card-text">GPS: ${phone.others.GPS}</p>
               <p class="card-text">NFC: ${phone.others.NFC}</p>
@@ -137,7 +139,9 @@ const Displaymoredetails = (phone) => {
               <p class="card-text">USB: ${phone.others.USB}</p>
               <p class="card-text">WLAN: ${phone.others.WLAN}</p>`;
   } catch {
-    div.innerHTML = `  <p class="card-text"> Sensors : ${phone.mainFeatures.sensors}</p>   
+    div.innerHTML = ` 
+    <p> Sensors : </p>
+     <p class="card-text"> ${phone.mainFeatures.sensors}</p>   
               <p class="card-text"> Others : No proper others value.</p>`;
   }
   phonedit.appendChild(div);
