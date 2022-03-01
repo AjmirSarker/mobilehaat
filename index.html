@@ -10,25 +10,27 @@
 </head>
 <body>
     <header>
-        <h1 class="text-center text-info mt-3 fw-bolder">Search Your Phone</h1>
+        <h1 class="text-center text-dark mt-3 fw-bolder">Phone Haat</h1>
+        <h3 class="text-center text-warning fw-bold mt-3 ">Search Your Desired Phone</h3>
         <!-- Phone Search -->
         <div class="input-group mb-3 w-50  mx-auto mt-5  rounded">
           <input
             type="text"
             id="input"
-            class="form-control"
-            placeholder="Type your food name"
+            class="form-control fw-bolder text-center text-dark border border-info border-2 bg-secondary bg-gradient bg-opacity-25 rounded rounded-2"
+            placeholder="Type your phone name"
             aria-label="Recipient's username"
             aria-describedby="button-addon2"
             
           />
         
           <a
+          href="#searchResult"
             onclick="searchPhone()"
-            class="btn btn-warning"
+            class="btn btn-dark"
             type="button"
             id="button-addon2"
-            href="#searchResult"
+            
           >
             Search
         </a>
@@ -45,26 +47,26 @@
         </div>
         <!-- Error Name -->
         <div id="ErrorName">
-          <h1 class="fw-bolder text-warning text-center ">Enter Valid phone name</h1>
+          <h3 class="fw-bolder text-danger text-center ">Enter Valid phone name</h3>
         </div>
 
     </header>
     <main>
-       <!-- Single Meal Details -->
-    <div id="singleDetails" class="d-flex justify-content-center mb-5"></div>
-    <div id="moreDetails" class="d-flex justify-content-center mb-5"></div>
+       <!-- Single phone Details -->
+    
+        <div id="singleDetails" class="d-flex justify-content-center "></div>
+    <div id="moreDetails" class="d-flex justify-content-center"></div>
+  
    
     <!-- Phone Search result -->
     <div class="container">
 
    
-      <div id="searchResult" class=" row row-cols-1 mb-5 row-cols-md-2 row-cols-lg-3  g-4 "></div>
+      <div id="searchResult" class=" row row-cols-1 row-cols-md-2 row-cols-lg-3  g-4 "></div>
     </div>
 
     </main>
-    <footer>
-
-    </footer>
+    
 
 
 

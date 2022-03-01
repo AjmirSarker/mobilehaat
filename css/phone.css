@@ -20,3 +20,6 @@ color: white;
 background: url(/picture/phone.jpg) no-repeat center; 
 background-size: cover; 
 }
+::placeholder{
+color: rgb(153, 149, 149) !important;
+}
