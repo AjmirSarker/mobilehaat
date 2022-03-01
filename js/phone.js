@@ -1,5 +1,7 @@
 //Show All Search Phone
 const searchPhone =()=>{
+    document.getElementById('moreDetails').innerHTML=''
+      document.getElementById('singleDetails').innerHTML=''
     Loading('block')
       let Searchfield = document.getElementById('input');
     let Searchvalue = Searchfield.value;
@@ -30,6 +32,7 @@ const searchPhone =()=>{
   const DisplayResult=(phones)=>{
     const mainDiv = document.getElementById('searchResult')
       mainDiv.innerHTML=''
+      
   
       if(phones.length==0){
   ErrorHandle('block')
@@ -61,6 +64,7 @@ const searchPhone =()=>{
       }
   }
   const loadPhoneDetails =(phoneId)=>{
+      document.getElementById('moreDetails').innerHTML=''
       const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;
       fetch(url)
         .then((res) => res.json())
@@ -75,44 +79,21 @@ const searchPhone =()=>{
         div.classList.add('shadow','card' ,'p-1','w-25',"rounded","text-center","mt-3");
         div.style.width = '18rem';
         
-       let releasedate= phone.releaseDate
-        if(releasedate.toString().length==0){
-          div.innerHTML = `
-          <img src="${phone.image}" class="card-img-top w-50 mx-auto" alt="...">
-          
-          <div class="card-body">
-         
-            <p class="card-text">${phone.name}</p>
-            <p class="card-text">${phone.mainFeatures.chipSet}</p>
-            <p class="card-text">${phone.mainFeatures.displaySize}</p>
-            <p class="card-text">${phone.mainFeatures.memory}</p>
-            <p class="card-text">No release date found</p>
-            <p class="card-text">${phone.mainFeatures.storage}</p>
-            <a  onclick="loadMoreDetails('${phone.slug}')" type="button" class="btn btn-dark text-center h-2">More details</a>
-            
-          </div>
-          `;
-  
-        }
-        else{
-          div.innerHTML = `
-          <img src="${phone.image}" class="card-img-top w-50 mx-auto" alt="...">
-          
-          <div class="card-body">
-         
-            <p class="card-text">${phone.name}</p>
-            <p class="card-text">${phone.mainFeatures.chipSet}</p>
-            <p class="card-text">${phone.mainFeatures.displaySize}</p>
-            <p class="card-text">${phone.mainFeatures.memory}</p>
-            <p class="card-text">${phone.releaseDate}</p>
-            <p class="card-text">${phone.mainFeatures.storage}</p>
-            <a  onclick="loadMoreDetails('${phone.slug}')" type="button" class="btn btn-dark text-center h-2">More details</a>
-            
-          </div>
-          `;
-        }
+        div.innerHTML = `
+        <img src="${phone.image}" class="card-img-top w-50 mx-auto" alt="...">
         
-      //   document.getElementById('moredetails').innerHTML=''href="#moredetails"
+        <div class="card-body">
+       
+          <p class="card-text">${phone.name}</p>
+          <p class="card-text">${phone.mainFeatures.chipSet}</p>
+          <p class="card-text">${phone.mainFeatures.displaySize}</p>
+          <p class="card-text">${phone.mainFeatures.memory}</p>
+          <p class="card-text">${phone.releaseDate?phone.releaseDate:'No ReleaseDate found.'}</p>
+          <p class="card-text">${phone.mainFeatures.storage}</p>
+          <a  onclick="loadMoreDetails('${phone.slug}')" type="button" class="btn btn-dark text-center h-2">More details</a>
+          
+        </div>
+        `;
         Mealdit.appendChild(div);
   
   }
