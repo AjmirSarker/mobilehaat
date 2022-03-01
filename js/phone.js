@@ -87,14 +87,14 @@ const displayPhoneDetails = (phone) => {
         <div class="card-body">
        
           <p class="card-text">Model: ${phone.name}</p>
-          <p class="card-text"> Chipset : ${phone.mainFeatures.chipSet}</p>
-          <p class="card-text"> Display size : ${
-            phone.mainFeatures.displaySize
-          }</p>
-          <p class="card-text"> Memory : ${phone.mainFeatures.memory}</p>
           <p class="card-text"> Release Date : ${
             phone.releaseDate ? phone.releaseDate : 'No ReleaseDate found.'
           }</p>
+          <p class="card-text"> Chipset : ${phone.mainFeatures.chipSet}</p>
+          <p class="card-text"> Memory : ${phone.mainFeatures.memory}</p>
+          <p class="card-text"> Display size : ${
+            phone.mainFeatures.displaySize
+          }</p>      
           <p class="card-text"> Storage : ${phone.mainFeatures.storage}</p>
           <a href="#moreDetails" onclick="loadMoreDetails('${
             phone.slug
