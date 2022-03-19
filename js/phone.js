@@ -38,7 +38,7 @@ const DisplayResult = (phones) => {
   } else {
     ErrorHandle('none');
     Loading('none');
-    phones.forEach((phone) => {
+    phones.map((phone) => {
       const div = document.createElement('div');
       div.classList.add('col', 'rounded', 'text-center');
 
@@ -59,7 +59,6 @@ const DisplayResult = (phones) => {
 };
 /// products info function
 const loadPhoneDetails = (phoneId) => {
-  document.getElementById('moreDetails').innerHTML = '';
   const url = `https://openapi.programming-hero.com/api/phone/${phoneId}`;
   fetch(url)
     .then((res) => res.json())
@@ -67,6 +66,7 @@ const loadPhoneDetails = (phoneId) => {
 };
 //Display single products info
 const displayPhoneDetails = (phone) => {
+  document.getElementById('moreDetails').innerHTML = '';
   const phonedit = document.getElementById('singleDetails');
   phonedit.innerHTML = '';
 
@@ -82,7 +82,7 @@ const displayPhoneDetails = (phone) => {
   );
 
   div.innerHTML = `
-        <img src="${phone.image}" class="card-img-top w-50 mx-auto" alt="...">
+        <img src=${phone.image} class="card-img-top w-50 mx-auto" alt="...">
         
         <div class="card-body">
        
@@ -96,6 +96,8 @@ const displayPhoneDetails = (phone) => {
             phone.mainFeatures.displaySize
           }</p>      
           <p class="card-text"> Storage : ${phone.mainFeatures.storage}</p>
+          <p class="card-text"> Phone SLUG : ${phone.slug}</p>
+          
           <a href="#moreDetails" onclick="loadMoreDetails('${
             phone.slug
           }')" type="button" class="btn btn-dark text-center h-2">More details</a>
